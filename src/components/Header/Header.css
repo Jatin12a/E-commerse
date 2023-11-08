@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.nav{
+    background-color: #212121;
+    /* height: 4rem; */
+    align-items: center;
+    padding:0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    z-index: 99;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    /* max-width: 120px; */
+    margin: 0 auto;
+    /* background-color: antiquewhite; */
+}
+.left{
+    display: none;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 20px; */
+    /* margin-left: -50px; */
+    /* background-color: aqua; */
+}
+.left li{
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.center{
+    /* background-color: aqua; */
+    padding: 12px;
+    /* justify-content: center; */
+    /* margin-left: ; */
+    position: absolute;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+.right{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* padding: 12px; */
+    color: #fff;
+    /* margin-right: 40px; */
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    left: 75%;
+    
+}
+.right svg{
+    /* background-color: red; */
+    cursor: pointer;
+}
+.right button{
+    background-color: #8e2de2;
+    padding: 5px;
+    border:none;
+    border-radius: 20px;
+}
+.cart-icon{
+    position: relative;
+}
+.cart-icon span{
+    min-width: 20px;
+    text-align: center;
+    background-color: #8e2de2;
+    padding: 2.5px;
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    line-height: 1;
+    font-size: 12px;
+    border-radius: 50%;
+}
+@media (min-width:750px) {
+    .nav{
+        padding: 0 40px;
+    }
+    .navbar{
+        height: 80px;
+    }
+    .left{
+        display: flex;
+    }
+    .center{
+        font-size: 34px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        /* background-color: red; */
+    }
+    .right{
+        gap: 25px;
+        position: static;
+
+    }
+    .rigth svg{
+        font-size: 24px;
+    }
+    
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    animation: sticky 0.3s ease forwards;
+}
+@keyframes sticky {
+    0%{    transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
