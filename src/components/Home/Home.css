@@ -1,0 +1,12 @@
+
+.homecontent{
+    max-width: calc(100%-20px);
+    margin: 0 auto;
+}
+
+
+@media (min-width:750px) {
+    .homecontent{
+    max-width: 1200px;
+    }
+}

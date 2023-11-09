@@ -1,0 +1,60 @@
+.shop{
+    margin: 25px 0;
+}
+.catagories{
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    /* background-color: red; */
+}
+.catagory{
+    background-color: black;
+    width: calc(50% - 5px);
+    cursor: pointer;
+    overflow: hidden;
+}
+.catagory img{
+    width: 100%;
+    display: block;
+    transition: 0.3s all ease;
+}
+.catagory img:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:750px) {
+    .shop{
+        margin: 50px 0;
+    }
+    .catagory{
+        width: calc(25% - 10px);
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+

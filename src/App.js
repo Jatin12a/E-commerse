@@ -13,8 +13,7 @@ function App() {
         <BrowserRouter>
         <AppContext>
             <Routes>
-                <Route path="/" element={<><Header/><Home /><Newsletter/>
-            <Footer/></>}/>
+                <Route path="/" element={<><Header/><Home /><Newsletter/><Footer/></>}/>
                 <Route path="/signup" element={<Signup />}/>
                 <Route path="/login" element={<Login />}/>
                 <Route path="/catagory/:id" element={<Category />}/>
