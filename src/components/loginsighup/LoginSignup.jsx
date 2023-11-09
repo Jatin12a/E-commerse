@@ -3,10 +3,10 @@ import './LoginSignup.css';
 import user_icon from "../../assets/person.png";
 import email_login from "../../assets/email.png";
 import password_icon from "../../assets/password.png";
-import {NavLink} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 // import Login from './LoginSignin'
 const Loginsighup=()=>{
-
+  const  history=useNavigate();
     const [inpval,setinpval] = useState({
         username:"",
         email:"",
@@ -52,7 +52,9 @@ const Loginsighup=()=>{
             console.log("data added successfully");
 
             localStorage.setItem("useryoutube",JSON.stringify([...data,inpval]));
+            history("/Login")
             }
+
     }
     return(
         <div className='container'>
