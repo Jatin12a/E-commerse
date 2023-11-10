@@ -16,8 +16,8 @@ function App() {
                 <Route path="/" element={<><Header/><Home /><Newsletter/><Footer/></>}/>
                 <Route path="/signup" element={<Signup />}/>
                 <Route path="/login" element={<Login />}/>
-                <Route path="/catagory/:id" element={<Category />}/>
-                <Route path="/product/:id" element={<SingleProduct />}/>
+                <Route path="/Category/:id" element={<><Header/><Category /><Newsletter/><Footer/></>}/>
+                <Route path="/product/:id" element={<><Header/><SingleProduct /><Newsletter/><Footer/></>}/>
             </Routes>
             
         </AppContext>
