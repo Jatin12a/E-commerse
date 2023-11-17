@@ -1,3 +1,158 @@
+.sppro{
+    margin: 20px 0;
+}
+.splayout{
+    max-width: calc(100% -20px);
+    margin: 0 auto;
+}
+.sppage{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+.spleft{
+    width: 100%;
+     background-color:rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+.spleft img{
+    width: 100%;
+    display: block;
+}
+.spright{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.spname{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+.spprice{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+.spdesc{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: #6b6b6b;
+}
+.cart-btn{
+    display: flex;
+
+}
+.quantity{
+    width: fit-content;
+    display: flex;
+    border: 2px solid rgba(0,0,0,0.2);
+    margin-right: 10px;
+    height: 50px;
+
+}
+.quantity span{
+    font-size: 18px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b6b6b;
+}
+.quantity span:nth-child(1){
+    /* background-color: red; */
+    border-right: 2px solid rgba(0,0,0,0.2);
+}
+.quantity span:nth-child(3){
+    /* background-color: red; */
+    border-left: 2px solid rgba(0,0,0,0.2);
+}
+.quantity span:nth-child(2){
+    /* background-color: red; */
+    padding: 0px 30px;
+}
+.addtocart{
+    outline: zero;
+    border: 0;
+    height: 50px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: #8828db;
+    border-bottom: 3px solid #531589;
+    flex-grow: 1;
+}
+.divider{
+    margin: 20px 0;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+
+}
+.info-item .text-b{
+    /* background-color: red; */
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+.info-item .text-b span{
+    /* background-color: red; */
+    font-size: 16px;
+    font-weight: 400;cursor: pointer;
+    color: #6b6b6b;
+}
+.info-item svg{
+    /* background-color: red; */
+    margin: 0 3px;
+}
+.info-item span{
+    font-size: 20px;
+    
+}
+
+
+
+
+
+
 @media (min-width:750px) {
+    .sppro{
+        margin: 75px 0;
+    }
+    .splayout{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .sppage{
+        flex-direction: row;
+    }
+    .spleft{
+        width: 600px;
+        height: 600px;
+    }
+    .spright{
+        padding: 0 35px;
+    }
+    .spname{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .spdesc{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    .cart-btn{
+       margin-top: 30px;
+    }
+    .addstocart{
+        flex-grow: unset;
+    }
     
 }

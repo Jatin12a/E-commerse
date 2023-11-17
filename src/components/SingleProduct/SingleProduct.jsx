@@ -5,7 +5,7 @@ import {
 
 import prod from '../../assets/products/earbuds-prod-3.webp'
 const SingleProduct = () => {
-    return <div className="sgpro">
+    return <div className="sppro">
         <div className="splayout">
             <div className="sppage">
                 <div className="spleft">
@@ -36,6 +36,7 @@ const SingleProduct = () => {
                 </div>
 
             </div>
+            <RelatedProducts/>
         </div>
         </div>;
 };
