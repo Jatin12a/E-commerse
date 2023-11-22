@@ -1,15 +1,30 @@
 import "./Product.css";
-import prod from '../../../assets/products/earbuds-prod-5.webp'
-const Product = () => {
-    return <div className="product-card">
-        <div className="thumbnail">
-            <img src={prod} alt="" />
+
+const Product = ({ data, id }) => {
+    return (
+        <div className="product-card">
+            <div className="thumbnail">
+                <img
+                    src={
+                        process.env.REACT_APP_STRIPE_APP_DEV_URL +
+                        data.img?.data[0]?.attributes?.url
+                    }
+                />
+            </div>
+            <div className="pro-detail">
+                <span className="nname">{data.title}</span>
+                <span className="pprice">&#8377;{data.price}</span>
+            </div>
         </div>
-        <div className="pro-detail">
-            <span className="nname">name</span>
-            <span className="pprice">&#8377;999</span>
-        </div>
-    </div>;
+    );
 };
 
 export default Product;
+
+
+
+
+
+
+
+

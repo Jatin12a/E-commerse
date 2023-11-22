@@ -13,14 +13,14 @@ const Cart = ({setShowcart}) => {
                 <span className="cltext">close</span>
                 </span>
             </div>
-            {/* <div className="empty">
+            <div className="empty">
                 <BsCartX/>
                 <span>No product in the cart.</span>
                 <button className='return-btn'>Return</button>
-            </div> */}
+            </div>
             <>
-            <CartItem/>
-            <div className="cart-footer">
+            {/* <CartItem/> */}
+            {/* <div className="cart-footer">
                 <div className="subtotal">
                     <span className="ftext">Subtotal:</span>
                     <span className="total">&#8377;12234</span>
@@ -28,7 +28,7 @@ const Cart = ({setShowcart}) => {
                 <div className="cfbtn">
                     <button className='checkout'>Checkout</button>
                 </div>
-            </div>
+            </div> */}
             </>
         </div>
     </div>

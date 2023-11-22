@@ -17,7 +17,7 @@
     border-bottom: 1px solid rgba(0,0,0,0.5);
     position: relative;
 }
-input{
+.ssinputt{
     width: 100%;
     min-width: 80%;
     height: 80px;
@@ -27,6 +27,7 @@ input{
     color: #212121;
     outline: none;
     text-transform: uppercase;
+    /* background-color: red; */
 }
 .clos-btn{
     position: absolute;
@@ -94,7 +95,7 @@ input{
        padding: 20px 0;
 
     }
-    input{
+    .ssinputt{
         font-size: 48px;
         height: 80px;
     }

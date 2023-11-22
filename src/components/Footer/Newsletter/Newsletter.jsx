@@ -10,7 +10,7 @@ const Newsletter = () => {
             <span className="sm-text">Newsletter</span>
             <span className="bgtext">Sign Up for latest Updates and offers</span>
             <div className="form">
-                <input type="text" placeholder="Email adresss"/>
+                <input className="nsinput" type="text" placeholder="Email adresss"/>
                 <button>Subscibe</button>
             </div>
             <div className="news-text">Will be Used in accordance With Our Privacy Policy</div>

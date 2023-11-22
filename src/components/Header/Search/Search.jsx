@@ -5,7 +5,7 @@ import "./Search.css";
 const Search = ({setshowsearch}) => {
     return <div className='search-modal'>
         <div className="form-field">
-            <input type="text" autoFocus placeholder='search here' />
+            <input className='ssinputt' type="text" autoFocus placeholder='search here' />
         <MdClose className='clos-btn' onClick={()=>{setshowsearch(false)}}/>
         </div>
         <div className="search-result">

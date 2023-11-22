@@ -14,15 +14,26 @@ import { Context } from "../../utils/context";
 import "./Header.css";
 
 import { setSelectionRange } from "@testing-library/user-event/dist/utils";
+
+
 const Header = () => {
+    const [logoutVar, setLogoutVar] = useState("Login")
     const [addData,setaddData]=useState(false);
     const logginn=useNavigate();
+    useEffect(()=>{
+
+        if(localStorage.getItem("useryoutube")){
+            setLogoutVar("Logout");
+        }
+
+    },[])
     const loginn = ()=>{
         logginn("/login")
         setaddData(true)
        
     }
     const logout = ()=>{
+        localStorage.removeItem("useryoutube")
         logginn('/login')
         setaddData(false)
     }
@@ -61,7 +72,9 @@ const Header = () => {
                         <CgShoppingCart />
                         <span>5</span>
                     </span>
-                    {setaddData ? <button onClick={logout}>logout</button> :<button onClick={loginn}>login</button> }
+                    {/* {setaddData ? <button onClick={logout}>logout</button> :<button onClick={loginn}>login</button> } */}
+
+                    {logoutVar==="Login"?<button onClick={loginn}>{logoutVar}</button>:<button onClick={logout}>{logoutVar}</button>}
                     
                 </div>
             </div>
