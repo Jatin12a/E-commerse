@@ -18,7 +18,6 @@ import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 
 const Header = () => {
     const [logoutVar, setLogoutVar] = useState("Login")
-    const [addData,setaddData]=useState(false);
     const logginn=useNavigate();
     useEffect(()=>{
 
@@ -29,19 +28,21 @@ const Header = () => {
     },[])
     const loginn = ()=>{
         logginn("/login")
-        setaddData(true)
        
     }
     const logout = ()=>{
         localStorage.removeItem("useryoutube")
         logginn('/login')
-        setaddData(false)
     }
 
 
     const [scroll,setscroll]=useState(false);
     const [showcart,setshowcart]=useState(false);
     const [showsearrch,setshowsearch]=useState(true);
+    const {cartCount} = useContext(Context);
+    const navigate = useNavigate();
+
+
     const handlescroll=()=>{
         const offset = window.scrollY
         if(offset>200){
@@ -60,17 +61,17 @@ const Header = () => {
        <> <header className={`nav ${scroll?'sticky':''}`}>
             <div className="navbar">
                 <ul className="left">
-                    <li>Home</li>
+                    <li onClick={()=>navigate("/")}>Home</li>
                     <li>About</li>
                     <li>Catagories</li>
                 </ul>
-                <div className="center">SHOPPING</div>
+                <div className="center" onClick={()=>navigate("/")}>SHOPPING</div>
                 <div className="right">
                     <TbSearch onClick={()=>{setshowsearch(true)}} />
                     <AiOutlineHeart/>
                     <span className="cart-icon" onClick={()=>{setshowcart(true)}}>
                         <CgShoppingCart />
-                        <span>5</span>
+                       {!!cartCount && <span>{cartCount}</span>}
                     </span>
                     {/* {setaddData ? <button onClick={logout}>logout</button> :<button onClick={loginn}>login</button> } */}
 

@@ -39,6 +39,7 @@
     line-height: 20px;
     margin-bottom: 20px;
     color: #6b6b6b;
+    /* background-color: red; */
 }
 .cart-btn{
     display: flex;
@@ -94,6 +95,9 @@
     width: 100%;
     background-color: rgba(0,0,0,0.1);
 
+}
+.info-item{
+    margin-bottom: 20px;
 }
 .info-item .text-b{
     /* background-color: red; */
